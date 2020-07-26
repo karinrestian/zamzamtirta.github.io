@@ -1,0 +1,181 @@
+body {
+    font-family: sans-serif;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    nav {
+        background-color: #ff8800;
+        padding:10px ;
+        position: sticky;
+        text-align: right;
+        top: 0;
+    }
+    nav a {
+        font-size: 18px;
+        font-weight: 400;
+        text-decoration: none;
+        color: white;
+    }
+    nav a:hover{
+        color: #000;
+        font-weight: bold;
+    }
+    .menu{
+        float: right;
+        display: none;
+        padding: 18px;
+    }
+    .menu:hover{    
+        cursor: pointer;
+    }
+    #check{
+        display: none;
+    }
+    .sidebar{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -300px;
+        width: 300px;
+        background-color: rgb(16, 47, 80, 0.9);
+        transition: 0.3s;
+        z-index: 9999;
+    }
+    .sidebar a{
+        color: white;
+        text-decoration: none;
+    }
+    .sidebar ul {
+        list-style: none;
+    }
+    .sidebar ul li a {
+        color: #fff;
+    }
+    .sidebar ul li {
+        padding: 24px;
+        transition: 0.3s;
+        transition-property: background-color;
+    }
+    .sidebar ul li:hover{
+        background-color: #000;
+    }
+    /* ketika menu di klik sidebar muncul */
+    #check:checked~.sidebar{
+        left: 0;
+    }
+    .banner {
+        height: 100vh;
+        background-image: url(../images/za.jpg);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner h2 {
+        color: #ffffff;
+        padding: 20px 25px;
+        border: 3px solid white;
+        /* atasbawah20, kirikanan 25 */
+    }
+
+    main{
+        padding: 20px;
+        overflow: auto;
+    }
+    .fasilitas {
+        width: 100%;
+        float: left;
+        margin: 0;
+        text-align: center;
+        padding: 0;
+    }
+
+    header {
+        display: inline;
+    }
+
+    .featured-image {
+        width: 30%;
+        max-height: 500px;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .card{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        padding: 20px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    nav li {
+        display: inline;
+        list-style-type: none;
+        margin-right: 20px;
+    }
+
+    #content{
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+    aside {
+        float: right;
+        width: 25%;
+        padding-left: 20px;
+    }
+
+    *{
+        box-sizing: border-box;
+    }
+    
+    @media screen  and(max-width: 1000px){
+        #content,
+        aside{
+            width: 100%;
+            padding: 0;
+        }    
+        .menu{
+            display: block;
+        }
+        /* saat uk mobile nav li hilang */
+        nav ul{
+            display: none;
+        }
+    }
+    .col-4-c{
+        width: 25%;
+        box-sizing: border-box;
+        float: left;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .col-4-ch4{
+        padding-bottom: 10px;
+        border-bottom: 1px solid;
+        margin-bottom: 10px;
+    }
+    h4{
+        color: #ff8800;
+    }
+    h2 {
+        color: #00afc6;
+        text-align: center;
+    }
+    h3{
+        color: #ff8800;
+    }
+    footer {
+    padding: 20px;
+    color: white;
+    background-color: #ff8800;
+    text-align: center;
+    /* font-weight: bold; */
+    }
